@@ -53,9 +53,9 @@ function annotate_js(settings, save_annotations_to, saved_annotations) {
 		function(e){
 			if(addIsOn){
 				//Get X/Y with chat-arrow and page offsets
-				var x = e.pageX - this.offsetLeft + annotation_xoff;
-				var y = e.pageY - this.offsetTop + annotation_yoff;
-								
+				var x = e.pageX - $(source_element).offset().left + annotation_xoff;
+				var y = e.pageY - $(source_element).offset().top + annotation_yoff;
+		        console.log(x + ":" + y);
 				add_annotation(x, y);
 			}
 		}
